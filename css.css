@@ -1,0 +1,409 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 дек. 2019 г., 19:43:23
+    Author     : Евгений
+*/
+body{
+    margin:0;
+    font-family: 'Poiret One', cursive;
+    font-size: 18px;
+    line-height: 1.6;
+}
+*,
+*:before,
+*:after{
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+}
+/*container*/
+.container{
+    width: 100%;
+    max-width: 1171px;
+    margin: 0 auto;
+}
+/*Intro*/
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /*верхние три строчки-для того,чтобы опустить блок вниз*/
+    width:100%;
+    height:100vh;
+    background: url("intro.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.intro__inner{
+    width: 100%;
+    max-width: 500px;
+    max-height: 470px;
+    line-height: 1;
+}
+.intro_title{
+    margin-top: -90px;
+    font-size: 99.36px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.intro__title{
+    font-size: 33.12px;
+    font-family: 'Poiret One';
+    text-align: center;
+    color:#fff;
+}
+.intro_subtitle{
+    margin-top: 60px;
+    font-size: 19.26px;
+    color: #fff;
+    text-align: center;
+}
+.intro__subtitle{
+    margin-top: 60px;
+    font-size: 19.26px;
+    color: #fff;
+    text-align: center;
+}
+.intro__subtitle:after{
+    margin: 0 auto;
+    content: "";
+    display:block;
+    width:180px;
+    height:3px;
+    background-color:#fff;
+}
+/*Button*/
+.button{
+    background-color: #6971d3; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0 0 35%;
+    cursor: pointer;
+    border-radius: 25%;
+    transition: background .3s 
+    linear, color .3s linear;
+}
+.button:hover{
+    background-color:#fff;
+    color: #000;
+    font-weight: bold;
+}
+.button1{
+    background-color: #4b497b; 
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left:925px;
+    margin-right:325px;
+    margin-bottom:-50px;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: background .3s 
+    linear, color .3s linear;
+}
+.button1:hover{
+    background-color:#fff;
+    color: #000;
+    font-weight: bold;
+}
+.call{
+    width: 50px;
+    height: 50px;
+    margin-left:1050px;
+    margin-right:150px;
+    margin-bottom:-40px;
+    border:2px solid pink;
+    border-radius: 100%;
+}
+/*Header*/
+.header{
+    padding-top: 25px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    padding-left: 65px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+/* Nav */
+.nav{
+font-size: 18px;
+text-transform: uppercase; /*Каждое слово пишется капслоком*/
+color: green;
+}
+
+.nav__link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0px 15px;
+    position: relative;
+    color: #0f3613;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color:#f0c960;
+    position: absolute;
+    top:100%;
+    left:0;
+    z-index: 1;
+    transition: opacity 0.2s linear;
+}
+.nav__link:hover{
+    color:#f0c960;
+}
+.nav__link:hover:after{
+    opacity: 1;
+}
+.nav__link.active:after{
+    opacity: 1;
+}
+.nav__link.active{
+    color:#f0c960;
+}
+/*Slider*/
+/*.slider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.slider_inner{
+    display:flex;
+    justify-content:space-between; 
+}
+.slider_item{
+    width: 24%;
+    font-size: 18px;
+    color:#fff;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border-top: 3px solid #fff;
+    opacity: 0.7;
+}
+.slider_item.active{
+    opacity: 1;
+    content: "";
+    display: block;
+    width:70px;
+    height: 3px;
+    z-index:1;
+    background-color: #4b497b;
+}
+.slider_num{
+    font-weight: 700;
+    font-size: 24px;
+}*/
+/*Block*/
+.block{
+    display: table;
+    width:100%;
+    height:100vh;
+    background: url("block.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.blog{
+    font-family: 'Poiret One', regular;
+    font-size: 26.54px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 50%;
+    padding-top: 50px;
+}
+.block_item{
+    display: table-cell;
+    padding-top: 60px;
+    padding-left: 30px;
+    width: 336px;
+    height: 336px;
+}
+.block_item.active{
+    margin-left: 60px;
+}
+/*About*/
+.about{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: url("фон с рамкой.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.about_block{
+    margin-left: 416px;
+    padding-top: 50px;
+    width: 715px;
+    height: 450px;
+}
+.about_logo{
+    font-size: 76.44px;
+    font-family: 'Poiret One';
+    text-align: center;
+    color:#fff; 
+}
+.about_text{
+    font-size: 18px;
+    text-align: center;
+    color:#fff; 
+    line-height: 2;
+}
+.about_text.active{
+    opacity: 0.7;
+}
+.about_text.active1{
+    opacity: 0.85;
+}
+.about_button{
+    background-color: #ca41a3; 
+    border: none;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40%;
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: background .3s 
+    linear, color .3s linear;
+}
+.about_button:hover{
+    background-color:#fff;
+    color: #000;
+    font-weight: bold;
+}
+/*WE*/
+.we{
+    display: table;
+    width:100%;
+    height:100vh;
+    background: url("block.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.we_text{
+    font-family: 'Poiret One', regular;
+    font-size: 26.54px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 40%;
+    padding-top: 35px;
+}
+.we_item{
+    display: table-cell;
+    padding-top: 60px;
+    padding-left: 30px;
+    width: 336px;
+    height: 336px;
+}
+.we_item.active{
+    margin-left: 60px;
+}
+/*Contacts*/
+.contacts{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: url("фон37.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.bot{
+    width: 700px;
+    height: 480px;
+    margin-right: 460px;
+}
+.bot_logo{
+    font-size: 76.44px;
+    font-family: 'Poiret One';
+    padding-top: 100px;
+    text-align: center;
+    color:#fff; 
+}
+.bot_text{
+    font-size: 15.4px;
+    color: #fff;
+    text-align: center;    
+}
+.bot_text.link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0px 15px;
+    position: relative;
+    color: #8772a1;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.bot_text.link:hover{
+    color: #fff;
+}
+.mob{
+    text-align: right;
+}
+/*Footer*/
+.foot{
+    padding: 40px;
+    display: inline-table;
+    width:100%;
+    height: 113px;
+    vertical-align: middle;
+    background: url("fut.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover; /*чтобы не повторялась картинка*/
+}
+.left{
+    display: table-cell;
+    font-size: 18.26px;
+    text-align: left;
+    color: #fff;
+}
+.middle{
+    display: table-cell;
+    font-size: 18.26px;
+    color: #fff;
+    line-height: 2;
+    text-align: center;
+}
+.right{
+    display: table-cell;
+    font-size: 18.26px;
+    text-align: right;
+    color: #fff;
+}
